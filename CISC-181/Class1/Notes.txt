@@ -1,0 +1,30 @@
+Operating system: Special software, translates instructions into hardware instructions
+
+Machine language: set of rudimentary instructions built into all computers, written in binary
+
+Assembly language: easier to read than machine language, an assembler converts machine language to assembly language
+
+High-level language: English-like text representation of machine language, much easier to code with. In order for machines to understand,
+we must convert from high-level using an interpreter or a compiler.
+
+Compiler: translates high-level to an intermediate level,
+
+Use the command "javac [Filename].java" to first compile a program, then use command "java [Filename]" to run the program.
+
+In an attempt at efficiency, Java compiler sets aside space in memory ahead of time for parameters, variables, and return values. So types
+must be declared to match.
+
+Different types: char, string, boolean, int
+
+Methods: Like classes but inside of functions
+
+Breakdown of method header: public static int max(int x, int y)
+    -public: available to other classes
+    -static: Don't need an instance of the class to access the method
+    -int: function returns a value that is of the type integer
+    -max: name of the function
+    -(int x, int y): two parameters of the method, both integer types
+
+Looping(Iteration):
+    -for loop: Loop counting variable, stopping condition, loop code
+    -while loop: Loop executes a code block until the stopping condition is no longer true

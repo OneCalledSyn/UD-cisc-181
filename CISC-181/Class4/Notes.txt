@@ -1,0 +1,23 @@
+Java is a true Object-Oriented language
+    -All Java programs are structured by classes
+    -A class serves as a template for an object
+        -Classes behave like basic data types, contain definition for all objects of the same type
+            -Defines the data types, names of properties, methods that define behavior; template for Object instances
+EXAMPLE
+
+class  ClassName    {
+  [fields declaration]
+  [methods declaration]
+	}
+
+Objects that lose their reference and cannot be used in the future become garbage collection candidates
+Java periodically dumps garbage to free up memory
+
+Encapsulation in Java is wrapping up data under a single unit
+-Deals with making information public or private
+-An object instance owns its state and behavior
+-public: all code can access state and behavior
+-private: only instances of the enclosing class can access state and behavior
+-protected: stricter than public but less strict than private
+
+General rule: All fields should be private, and methods should be private if possible

@@ -1,0 +1,31 @@
+-Use java.import.Scanner
+-When reading from the keyboard, must use "System.in" command, which reads from the console
+    -Scanner looks for tokens in the input
+    -Tokens are a series of characters that ends with whitespace
+        -A blank, a tab, a carriage return, or end of the file
+-File class contains a reference to an actual file location on your computer
+    -Special classes can read and write data to files
+    -Scanners can read a file just like a console input
+        -First, a file object must be created
+-Exceptions that could cause issues with file reading/writing:
+    -Run out of disk space
+    -Lack permission to write/read
+    -Lose connection to disk during writing/reading
+    -File is locked by another program
+-Certain methods in Java can throw an exception
+-Some file IO exceptions:
+    -IOException (InputOutput Exception)
+    -EOFException (End of File Exception)
+    -FileNotFoundException
+-Use "Try...Catch" to catch the thrown exceptions
+    -Able to write multiple catch statements
+-Exception is the catch all thrown exception
+    -Use 'getMessage' to figure out what the error was
+
+-Writing to a file
+    -System.out.println is a special instance of PrintStream
+
+-Formatting instead of using println
+    -System.out.format("");
+    -Outfile.format();
+    -System.out.format("%3.2f", pi)

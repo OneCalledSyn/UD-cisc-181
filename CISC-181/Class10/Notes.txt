@@ -1,0 +1,46 @@
+Maps
+
+-Mapping a key to a value
+    -Ex. Soccer players, map each player to a position
+        -Each player is unique, but their position doesnt have to be
+        -Each player's name should bring up their position
+-Map interface maps unique keys to values which need not be unique
+    -A key is an object that you use to retrieve a value stored in a Map object
+-Map implementations
+    -HashMap (uses hashing function on keys)
+    -TreeMap (orders keys)
+    -LinkedHashMap (hash table and linked list implementation of Map interface)
+-Declaring maps:
+    -Class HashMap<K,V>
+    -Declare type for both key and value
+        - HashMap<String, ArrayList<String>> map = new HashMap();
+-Looping through maps:
+    - For each loop:
+        - for (Object o : collection)
+            System.out.println(o);
+    -Equivalent to:
+        -for (Iterator i = collection.iterator(); i.hasNext();) {
+            Object o = i.next();
+            System.out.println(o);
+        }
+    - Everything that inherits from Collections interface has an iterator
+        -Usually the best way to traverse objects in a collection
+    -Iterator allows you to cycle through a collection, obtaining or removing elements
+    -ListIterator allows bi-directional traversal through a list
+    -To use an iterator properly:
+        -Obtain an interator (pointer) to the start of the collection
+        -Call the collection's iterator() method
+        -Set up a loop that makes a call to hasNext()
+        -Have the loop iterate as long as hasNext() returns true
+        -Within the loop, call next() to obtain each element
+        -void remove() removes the previous element, only SAFE way to remove elements during iteration
+-Filter algorithm shown in file
+
+    Comparable interface
+
+-Used for comparing and sorting objects by some quality
+-Can't sort the objects on its own, but defines a single method "compareTo()"
+-compareTo() should return an int (1 if greater, -1 if lesser, 0 if equal)
+-All primitive wrapper classes implement the Comparable interface
+    -Primitive wrapper classes are Integer, Double, Character
+-equals and compareTo should work the same

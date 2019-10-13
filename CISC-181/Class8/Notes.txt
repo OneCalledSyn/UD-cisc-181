@@ -1,0 +1,78 @@
+    Abstract Things
+
+-Abstract classes
+    -Declared using the abstract keyword
+    -Can't be instantiated (no objects made from this class)
+    -MUST be a superclass to other classes
+
+-Abstract methods
+    -Methods with no implementation
+    -A class must be abstract if it has abstract methods
+    -Have to be overwritten by a subclass (forced to write a definition for the abstract superclass method in the subclass)
+    -Example: Graphing lines, circles, rectangles, triangles, geometric shapes, etc
+        -All have certain states (position, orientation, line color, fill color, etc)
+        -All have certain behaviors (move, rotate, resize, draw, etc)
+        -Some of the above states/behaviors are the same for all these graphoc objects (moveTo, fill color, position)
+        -Other need different implementations (resize, Draw)
+        -See Circle + Graphic Object files
+
+Interfaces
+
+-Contains only constants and abstract methods
+-Cannot have fields or implemented methods
+-All subclasses of an interface must implement each method in the interface
+-All fields must be public static
+-All methods must be public abstract
+    -Because of the above two restrictions, those modifiers dont need to be written
+-Not part of the class hierarchy
+    =A class can implement many different interfaces
+
+
+Boolean vs boolean
+    -boolean is a primitive type, just gives a true or false evaluation
+    -Boolean is a class/reference type, which stores a reference to an object containing a value
+    -Boolean is the "wrapper type" for boolean
+    -Objects of type "Boolean" are "boxed" values
+
+-Use Abstract if:
+    -There’s sharable code that all subclasses will instantiate the same
+    -There’s sharable fields that all subclasses will want to have
+    -There are some methods or fields that you want to keep protected from outside code (or private, for that matter)
+
+-Use Interfaces if:
+    -Classes that may not be terribly related will still use the same methods
+    -Want to be able to use methods (by knowing their input parameters and output type), but not concerned with how the method is implemented
+
+    Collections
+
+-Objects that groups things in order to store, retrieve, and manipulate data
+-Automatically grow in size
+-Contain objects
+-Have many useful methods prewritten
+-Also known as containers
+-Collections are an abstract class, never create collection object
+-Large set of methods that belong to ALL subclasses derived from the collection
+    -Methods can be ovewritten depending on collection type
+
+    Array Lists
+
+-Used to store a list of objects
+-import java.util.ArrayList
+-   ArrayList blarg = new ArrayList();
+-Don't have to specify type for the methods for them to work
+    -If specified, can use the methods and values associated with the class type
+    -   ArrayList<Dog> blarg = new ArrayList();
+    -Must be object type, primitive type like "int" not allowed
+    -Integer, Character, Double, and Boolean are the object versions of the primitive types
+
+    Linked Lists
+
+-Implements list interface as well, just a different way of doing Array Lists
+    -List interface extends collection interface
+-Linked lists are a series of singular objects, each having a pointer to the next object
+-Each element/node has two components: data and a pointer to another element/node
+-First node is the head, last node is the tail and point to null
+-If each node points to the next node in the list, it's called singly linked list
+-Better at adding and removing than Array Lists, but worse at getting and setting
+-Array List is better if the program is thread-safe
+-Linked List pulls from Queue interface as well, so it has more methods

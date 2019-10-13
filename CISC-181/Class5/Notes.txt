@@ -1,0 +1,38 @@
+Able to make 2-D arrays: int[][] arr2d = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+
+    -int[][] arr2d = new int[a][b]; will give a 2-D array with a arrays each of b elements
+    -Can have even higher dimension arrays
+    -3D array is an array of 2D arrays
+    -4D array could be used to store x/y/z/t coordinates
+
+Accessors:
+
+    -public instance methods that access private data (getters)
+    -can return different forms of the data
+    -Convention: getSomeProperty()
+    -ex: getField
+
+Mutators:
+
+    -public instance methods that change private data
+    -may change more than one private data element
+    -Convention: setSomeProperty()
+    -ex: setField
+
+Static Variables and Methods:
+
+    -independent of individual objects made from a class
+    -everything else is specific to the particular object being created from the class
+    -Static variables belong to a class, should be mostly used for constants to avoid bugs
+    -Beginner mistake is to make everything static, try to have more flexibility
+    -Static methods belong to a class as well, so they dont have access to object fields
+    -Can't call nonstatic methods because those use object variables
+
+Instance Variables and Methods:
+
+    -Not static, instance variables belong to a specific instance
+    -Instance methods are invoked by an instance if the class
+
+Null Value:
+
+    -If the data field of a reference type does not reference some object, the data field holds the special value null

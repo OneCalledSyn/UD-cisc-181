@@ -1,0 +1,29 @@
+Array: data structure that is a collection of the same type of data
+    -Fixed length list
+    -Example: double [] myList = new double[10]; //Array containing 10 elements, indexed 0-9
+        -new: Java keyword that creates the object (calls a constructor to initialize the array object)
+        -Java is class based, so anything that isn't a primitive type (int, double, char) needs to be instantiated
+
+Adavanced for loop: //for (T element:Collection obj/array)
+//{
+//    statement(s)
+//}
+    -Example: String array[] = {"Ron", "Harry", "Hermoine"};
+
+        for (String x:array)
+        {
+            System.out.println(x);
+        }
+        //Ron, Harry, Hermione is the output
+
+Java.util.Arrays is an import containing many useful methods for dealing with arrays (sort, binary search, fill, to string)
+
+A constructor is a special method used to initialize objects. When an object of a class is created, the constructor is called.
+
+In Java, strings are IMMUTABLE.
+    -Immutable classes cannot have their instances modified
+    -Designed to be immutable for security and efficiency
+
+Accessors are used to return the value of a private field
+
+If you try to print an object without a toString() method, it will just print out the hash representation of the object

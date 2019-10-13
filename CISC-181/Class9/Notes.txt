@@ -1,0 +1,26 @@
+    Sets
+
+-A set is a collection that cannot contain duplicate elements
+-No order (except TreeSets?)
+-Set interface only contains method inherited from Collection, but not List
+-NOT structured like lists
+-Have to implement the method signatures in the Collection interface
+-There is no "get" method since there is no order in a set
+
+    Hash Set
+
+-Used more frequently than TreeSet
+-Faster than TreeSet for: contains, add, remove
+    -Usually faster than lists as well
+-NOT ordered
+-Concept: take an object that we want to put in the set, use a hashing function on that object
+    -This (hopefully) gives the object a unique index
+    -Object is then placed at that unique index in an array
+-A hash function is any function that can be used to map data of arbitrary size onto data of a fixed size
+-Goal is to be able to locate objects quickly
+    -All objects that are equal should have the same index generated for them
+
+    Tree Set
+
+-Implements SortedSet interface, so despite being a set, it IS ordered
+-Objects are stored in a sorted and ascending order

@@ -1,0 +1,67 @@
+Public classes must have the same name as the source file, so there can ONLY BE ONE per .java file
+
+Composition: defining a new class that is composed of other classes
+    -The "Deck" class is composed of the "Card" class
+    -The "CardGame" class is composed of the "Deck" class
+
+this: keyword in java that refers to the current object
+
+Using "this" with a Field
+
+public class Point {
+    public int x = 0;
+    public int y = 0;
+
+    //constructor
+    public Point(int x, int y) {
+    //Each argument in the constructor shadows one of the object's fields
+        this.x = x;
+        this.y = y;
+    }
+}
+
+
+Using "this" with a Constructor
+
+//Explicit constructor invocation
+
+public class Rectangle {
+    private int x, y;
+    private int width, height;
+
+    //Constructor for a default reactangle if no arguments are passed in
+    public Rectangle() {
+        this(0, 0, 1, 1);
+    }
+
+    //Constructor for a rectangle that takes width and height args and uses x=0 and y=0 by default
+    public Rectangle(int width, int height) {
+        this(0, 0, width, height);
+    }
+
+    //Construtor that passes all four arguments and uses no defaults
+    public Rectangle(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+    ...
+}
+
+Inheritance: deriving a new class based on an existing class, with mods or extensions
+
+    -Puts classes into a hierarchy
+    -Used to avoid duplication and redundancy and redundancy
+    -Lower hierarchy classes are called subclasses
+    -Upper hierarchy classes are called superclasses
+    -Common variables and methods go in the superclass
+    -Specialized variables and methods in the subclasses
+    -Use "extends" in the class definition to indicate inheritance
+        -   class Goalkeeper extends SoccerPlayer {...}
+-Overriding: Writing a method in the subclass with the same name as a method in the superclass, the subclass one takes precedence
+-Anything public in the superclass is available to all subclasses
+-Private can only be accessed by the superclass normally
+-Protected superclass fields can be accessed only by derived subclasses
+
+-Any Java object which can pass more than one "isA" test can be said to be polymorphic
